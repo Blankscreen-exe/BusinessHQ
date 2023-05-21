@@ -1,0 +1,12 @@
+# environment
+venv/
+.env
+.vscode/
+.notebook/
+__pycache__/
+
+# test database
+db.sqlite3
+
+# secrets
+secrets/
