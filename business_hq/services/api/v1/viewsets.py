@@ -13,7 +13,7 @@ class ServicesViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAdminUser, IsAuthenticated]
     
 class ServicesListView(APIView):
-    """Responds with a list of all available services
+    """Secure separate view which Responds with a list of all available services.
     """
     def get(self, request):
         services = ServicesModel.objects.all()
@@ -21,8 +21,10 @@ class ServicesListView(APIView):
         return Response(data)
 
 class ServiceView(APIView):
+    """Shows details of a single service.
+    """
     def get(self, request, pk):
         services = ServicesModel.objects.filter(pk=pk)
         # TODO: do a check to see if any results show up
         data = {'services': list(services.values())}
-        return Response(data)
+        return Response(data) 
