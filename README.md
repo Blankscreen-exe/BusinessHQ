@@ -38,3 +38,25 @@ makeshift  readme. will do a better one afterwards
     python manage.py runserver
     
 7- visit the URL `localhost:8000/admin/` and use the credentials of the superuser you created to be able to see the admin panel. Some routes are also working including `JWT authentication`.
+
+
+## Routes for User's JWT authentication
+
+1- user register
+```
+http://localhost:8000/api/v1/users/register/
+```
+
+2- user login
+```
+http://localhost:8000/api/v1/users/login/
+```
+3- get token
+```
+http://localhost:8000/token/
+```
+
+4- token refresh
+```
+http://localhost:8000/token/refresh/
+```
