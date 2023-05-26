@@ -67,7 +67,9 @@ http://localhost:8000/token/refresh/
 - [ ] payment api
 - [ ] chat api
 - [ ] login/signup api
+
 **Frontend**
+
 - [ ] home page
 - [ ] login/signup (for customers)
 - [ ] login (for staff)
