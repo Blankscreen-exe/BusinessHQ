@@ -60,3 +60,19 @@ http://localhost:8000/token/
 ```
 http://localhost:8000/token/refresh/
 ```
+
+## TODO
+**Backend**
+- [ ] services api
+- [ ] payment api
+- [ ] chat api
+- [ ] login/signup api
+
+**Frontend**
+
+- [ ] home page
+- [ ] login/signup (for customers)
+- [ ] login (for staff)
+- [ ] services catalogue page
+- [ ] service details page
+- [ ] admin statistics dashboard
