@@ -37,6 +37,7 @@ function Hero() {
   text-decoration: none;
   margin: 1rem;
   position: relative;
+  font-weight: 700;
 
   &:hover {
     color: #c1c1c1;
