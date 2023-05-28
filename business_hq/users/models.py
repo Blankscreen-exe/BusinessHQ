@@ -51,6 +51,7 @@ class User(AbstractUser):
     # REQUIRED_FIELDS = []
 
 class UserGroup(models.Model):
+    
     ADMIN = 0
     MANAGER = 1
     HANDLER = 2
@@ -86,3 +87,4 @@ class UserCardModel(models.Model):
     
     # payment details
     payment_card_id = models.CharField(max_length=225, blank=True, null=True)
+    brand = models.CharField(max_length=225, blank=True, null=True)
