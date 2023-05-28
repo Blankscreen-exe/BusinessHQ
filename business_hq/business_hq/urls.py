@@ -40,8 +40,6 @@ router.register(r'api/v1/users', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('users.urls')), # TODO: Muda muda remove it
-    # path('api/v1/', include('users.api.v1.urls')), # TODO: its a dummy remove it
     path('api/v1/', include('services.api.v1.urls')),
     
     # JWT
