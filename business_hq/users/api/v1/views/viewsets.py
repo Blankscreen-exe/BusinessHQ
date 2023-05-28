@@ -2,6 +2,8 @@ from rest_framework.response import Response
 from rest_framework import viewsets
 from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from django.contrib.auth.decorators import login_required
+from rest_framework_simplejwt.authentication import JWTAuthentication
+
 
 from users.models import User
 from users.api.v1.serializers import UserSerializer
@@ -15,16 +17,26 @@ class UserViewSet(viewsets.ModelViewSet):
     # permission_classes = [IsAdminUser, IsAuthenticated]
     
     def list(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            # Custom logic for authenticated user
-            pass
+        # allow this method only if the user is admin
+        
+        jwt_authentication = JWTAuthentication()
+        user = request.user.username
+        print("=======================", user)
+        
+        if request.user.is_authenticated and request.user.is_superuser:
+            # TODO: Custom logic for authenticated user
+            print(f"MESSAGE: The user {user} is authorized to see all users")
+        print(f"MESSAGE: The user {user} is NOT authorized to see all users")
+        
 
         return super().list(request, *args, **kwargs)
     
     def create(self, request, *args, **kwargs):
-        if request.user.is_admin:
+        if request.user.is_superuser:
             # Custom logic for admin user
+            print(" THIS USER IS SUPER USER")
             pass
+        print(" THIS USER IS NOT SUPER USER")
 
         return super().create(request, *args, **kwargs)
     
