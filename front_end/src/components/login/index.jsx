@@ -8,9 +8,7 @@ export default function Login() {
   return (
     <div>Login
         {/* TODO: do some logic here */}
-        <StaffLogin/>
         <CustomerLogin/>
-        <SignUp/>
     </div>
   )
 }
