@@ -8,12 +8,9 @@ import Hero from './Hero'
 
 function Home() {
   return (
-    <div className='home-container'>Home
-
-<Hero/>
-<Services/>
-<Login/>
-<Footer/>
+    <div className='home-container'>
+      {/* TODO: add all home stuff here and make it look beautiful */}
+      <h1 align="center">Home</h1>
     </div>
   )
 }
