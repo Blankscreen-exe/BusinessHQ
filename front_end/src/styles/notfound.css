@@ -1,0 +1,9 @@
+.not-found-404{
+    max-width: 60%;
+    min-width: 350px;
+    max-height: 350px;
+}
+
+.not-found-message {
+    font-size: 19px;
+}
