@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { 
-  Link, 
+  Link, NavLink, 
   // withRouter 
 } from "react-router-dom";
 import { route_links as links } from "../../routes/main";
@@ -30,6 +30,25 @@ import GlobalStyles from "@mui/material/GlobalStyles";
 import { styled } from "@mui/material/styles";
 
 
+function ActiveNavLink(isActive) {
+  /*styling for navigation links*/
+  return isActive ? {
+    color: "#00aae1",
+    backgroundColor: "#00c9ff33",
+    padding: "5px",
+    borderRadius: "5px",
+    fontWeight: 700,
+  } : 
+  {
+    color: "#6c6c6c",
+    textDecoration: null,
+    margin: "1rem",
+    position: "relative",
+    fontWeight: 700,
+  }
+  
+}
+
 function Hero() {
   
   // styles for nav links
@@ -49,8 +68,10 @@ function Hero() {
     props.disabled &&
     `
     pointer-events: none;
-    color: LightGrey;
-    text-decoration: underline;
+    color: #00aae1;
+    background-color: #00c9ff33;
+    padding: 5px;
+    border-radius: 5px;
   `}
 `;
 
@@ -71,29 +92,30 @@ function Hero() {
             Company name
           </Typography>
 
+          {/* TODO: disable nav links if they lead to the current page */}
           <nav>
             <StyledLink 
               to={links.home} 
               disabled={current_url === links.home}
-              className="nav-links">
+              className="nav-links" reloadDocument>
               Home
             </StyledLink>
             <StyledLink 
               to={links.services_catalogue} 
               disabled={current_url === links.services_catalogue}
-              className="nav-links">
+              className="nav-links" reloadDocument>
               Catalogue
             </StyledLink>
             <StyledLink 
               to={links.contact} 
               disabled={current_url === links.contact}
-              className="nav-links">
+              className="nav-links" reloadDocument>
               Contact
             </StyledLink>
             <StyledLink 
               to={links.portfolio} 
               disabled={current_url === links.portfolio}
-              className="nav-links">
+              className="nav-links" reloadDocument>
               Portfolio
             </StyledLink>
           </nav>
