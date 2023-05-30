@@ -16,6 +16,7 @@ class UserViewSet(viewsets.ModelViewSet):
     # TODO: no need for permissions for this one
     # permission_classes = [IsAdminUser, IsAuthenticated]
     
+    # TODO: permissions = Manager, Admin
     def list(self, request, *args, **kwargs):
         # allow this method only if the user is admin
         
@@ -24,22 +25,28 @@ class UserViewSet(viewsets.ModelViewSet):
         print("=======================", user)
         
         if request.user.is_authenticated and request.user.is_superuser:
-            # TODO: Custom logic for authenticated user
+            # TODO: TODO: Custom logic for authenticated user
             print(f"MESSAGE: The user {user} is authorized to see all users")
         print(f"MESSAGE: The user {user} is NOT authorized to see all users")
-        
+         
 
         return super().list(request, *args, **kwargs)
     
+    # TODO: permissions = Customer, Admin
     def create(self, request, *args, **kwargs):
-        if request.user.is_superuser:
-            # Custom logic for admin user
+        try:
+            if request.user.is_superuser:
+                # TODO: Custom logic for admin user
             print(" THIS USER IS SUPER USER")
+                print("==========", request.user.get_profile().username)
+                pass
+        except:
             pass
         print(" THIS USER IS NOT SUPER USER")
 
         return super().create(request, *args, **kwargs)
     
+    # TODO: permissions = Admin, Customers
     @login_required
     def destroy(self, request, *args, **kwargs):
         if request.user.is_admin:
@@ -55,7 +62,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 # TODO: view for manager CRUD
-# TODO: view for customer handler CRUD
+# TODO: view for customer handler CR
 
 
     
