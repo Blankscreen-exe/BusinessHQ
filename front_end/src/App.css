@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -39,4 +39,54 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* ===================================================== */
+
+.golden-font{
+  color: #b59c14;
+}
+
+.title-font{
+  font-size: 2em;
+}
+
+/* ===================================================== */
+
+#Home_Title {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-center {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-image{
+  max-width: 30%;
+  min-width: 350px;
+  max-height: 350px;
+}
+
+.nav-logo-image {
+  width: 192px;
+  height: 43px;
+}
+
+.home-wallpaper{
+  max-width: 70%;
+  min-width: 350px;
+  max-height: 350px;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 6px 9px 23px -10px rgba(130,130,130,0.82);
+  -moz-box-shadow: 6px 9px 23px -10px rgba(130,130,130,0.82);
+  box-shadow: 6px 9px 23px -10px rgba(130,130,130,0.82);
 }

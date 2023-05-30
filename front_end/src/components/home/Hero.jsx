@@ -89,7 +89,7 @@ function Hero() {
         <Toolbar sx={{ flexWrap: "wrap" }}>
           <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
             {/* TODO: add a company logo in svg */}
-            Company name
+            <img src="/home/BHQ_logo.png" className='nav-logo-image'/>
           </Typography>
 
           {/* TODO: disable nav links if they lead to the current page */}
