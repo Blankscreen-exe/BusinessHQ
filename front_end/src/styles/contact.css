@@ -1,0 +1,27 @@
+.contact-form-container {
+    width: 70%;
+    height: 600px !important;
+    margin-top: 40px;
+    border-radius: 11px;
+    
+    -webkit-box-shadow: 2px 8px 37px -12px rgba(130,130,130,0.62);
+    -moz-box-shadow: 2px 8px 37px -12px rgba(130,130,130,0.62);
+    box-shadow: 2px 8px 37px -12px rgba(130,130,130,0.62);
+}
+
+.contact-box-adjust {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+/* fixing heiught of MUI grid element */
+.MuiGrid-container {
+    /* height: 600px !important; */
+    height: inherit;
+
+    /* adding styles */
+    overflow: hidden;
+    border-radius: 10px;
+
+}
