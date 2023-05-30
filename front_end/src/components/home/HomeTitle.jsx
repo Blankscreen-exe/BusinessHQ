@@ -14,7 +14,7 @@ function HomeTitle() {
     <div className="flex-center">
         <img id='Home_Title'/>
         <h2 className='title-font'>
-            Your Personal <span className="golden-font">Business Platform</span>
+            Your Personal <span className="golden">Business Platform</span>
         </h2>
         <img src="/home/main_wallpaper.png" className='home-wallpaper'/>
         <h2>Grow Your Potential!</h2>
