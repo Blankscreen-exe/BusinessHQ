@@ -14,6 +14,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import { route_links } from '../../routes/main';
 import { Copyright } from '../misc/CopyRight';
 
 // TODO remove, this demo shouldn't need to reset the theme.
@@ -90,7 +91,7 @@ export default function CustomerLogin() {
               </Grid>
               <Grid item>
                 {/* TODO: add a link */}
-                <Link href="#" variant="body2">
+                <Link href={route_links.register_customer} variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

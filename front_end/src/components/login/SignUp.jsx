@@ -14,6 +14,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import { Copyright } from '../misc/CopyRight';
 
+import { route_links } from '../../routes/main';
+
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
@@ -108,7 +110,7 @@ export default function SignUp() {
             <Grid container justifyContent="flex-end">
               <Grid item>
                 {/* TODO: add a link */}
-                <Link href="#" variant="body2">
+                <Link href={route_links.login_customer} variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
