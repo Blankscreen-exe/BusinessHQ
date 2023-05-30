@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import { 
   Link, 
   // withRouter 
@@ -53,6 +54,7 @@ function Hero() {
   `}
 `;
 
+    let current_url = window.location.pathname
 
   return (
     <div>
@@ -70,10 +72,30 @@ function Hero() {
           </Typography>
 
           <nav>
-            <StyledLink to={links.home} disabled={location.pathname === links.home}>Home</StyledLink>
-            <StyledLink to={links.services_catalogue} disabled={location.pathname === links.services_catalogue}>Catalogue</StyledLink>
-            <StyledLink to={links.contact} disabled={location.pathname === links.contact}>Contact</StyledLink>
-            <StyledLink to={links.portfolio} disabled={location.pathname === links.portfolio}>Portfolio</StyledLink>
+            <StyledLink 
+              to={links.home} 
+              disabled={current_url === links.home}
+              className="nav-links">
+              Home
+            </StyledLink>
+            <StyledLink 
+              to={links.services_catalogue} 
+              disabled={current_url === links.services_catalogue}
+              className="nav-links">
+              Catalogue
+            </StyledLink>
+            <StyledLink 
+              to={links.contact} 
+              disabled={current_url === links.contact}
+              className="nav-links">
+              Contact
+            </StyledLink>
+            <StyledLink 
+              to={links.portfolio} 
+              disabled={current_url === links.portfolio}
+              className="nav-links">
+              Portfolio
+            </StyledLink>
           </nav>
 
           <Button
