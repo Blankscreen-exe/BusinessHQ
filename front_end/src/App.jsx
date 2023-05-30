@@ -12,6 +12,7 @@ import Contact from './components/contact'
 import Home from './components/home'
 import Hero from './components/home/Hero'
 import Footer from './components/home/Footer'
+import Notfound from './components/misc/Notfound404'
 // import Dashboard from './components/analytics/Dashboard'
 
 // importing route constants
@@ -21,12 +22,6 @@ function App() {
   
   console.log("RUNNING FROM APP ",window.location.pathname)
 
-  // UI resources
-
-  // https://mui.com/material-ui/getting-started/templates/
-  
-  // https://reactrouter.com/en/main/start/tutorial
-
   return (
     <>
       {/* navbar */}
@@ -35,6 +30,7 @@ function App() {
       {/* routes to different sections */}
       <Routes>
         <Route 
+          index
           path={link.home} 
           element={<Home/>}
           />
@@ -61,6 +57,11 @@ function App() {
         <Route 
           path={link.contact} 
           element={<Contact/>}
+          />
+
+        <Route 
+          path={"*"} 
+          element={<Notfound/>}
           />
       </Routes> 
 
