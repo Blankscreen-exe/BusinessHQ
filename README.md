@@ -8,7 +8,7 @@ makeshift  readme. will do a better one afterwards
     cd BHQ
     git clone https://github.com/Blankscreen-exe/BusinessHQ.git
 
-2- rename the `.env example` file inside `./business_hq/business_hq`  to `.env` (with a dot at the beginning)
+2- rename the `.env example` file inside `./BHQ/business_hq`  to `.env` (with a dot at the beginning)
 
 3- once the download is complete, create a virtual environment and activate it.
 
