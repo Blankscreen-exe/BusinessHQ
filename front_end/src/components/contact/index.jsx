@@ -185,6 +185,11 @@ function Contact() {
                 <Typography component="h1" variant="h5">
                   We'd love to hear from you!
                 </Typography>
+                <Typography component="p" variant="p" sx={{
+                  color: "#afafaf",
+                }}>
+                  ... And don't worry, we will reply to you as soon as we can!
+                </Typography>
                 <Box
                   component="form"
                   noValidate
